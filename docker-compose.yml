@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  react-app-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5188:5188"
+    environment:
+      - NODE_ENV=production   # ya development, jo chahiye wo rakho
+    volumes:
+      - .:/app
+    labels:
+      - subdomain=if.workbrink.com
+      - websiteName=itec-frontend
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5188"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+

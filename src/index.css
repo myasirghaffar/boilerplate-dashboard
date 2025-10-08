@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-medium;
+    font-family: 'Poppins', sans-serif !important;
+  }
+}
+
+
+
+
+html {
+  font-size: 16px;
+  /* Default for 1920px screens */
+}
+
+/* Adjust for larger screens */
+@media (min-width: 2560px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+/* Adjust for 1440px screens */
+@media (max-width: 1440px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Adjust for 1280px screens */
+@media (max-width: 1280px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Adjust for tablets (1024px) */
+@media (max-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Adjust for smaller devices */
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-width: 320px;
+  min-height: 100vh;
+  /* overflow: hidden; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+p,
+span,
+a,
+small,
+label {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Custom input styling to ensure only bottom borders */
+.login-input-bottom-border {
+  border: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+  outline: none !important;
+  box-shadow: none !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.login-input-bottom-border:hover {
+  background-color: rgba(234, 91, 40, 0.1) !important;
+  border-bottom: 1px solid rgba(234, 91, 40, 0.5) !important;
+}
+
+.login-input-bottom-border:focus {
+  border: none !important;
+  border-bottom: 1px solid rgba(234, 91, 40, 0.8) !important;
+  background-color: rgba(234, 91, 40, 0.15) !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.login-select-bottom-border {
+  border: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+  outline: none !important;
+  box-shadow: none !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.login-select-bottom-border:hover {
+  background-color: rgba(234, 91, 40, 0.1) !important;
+  border-bottom: 1px solid rgba(234, 91, 40, 0.5) !important;
+}
+
+.login-select-bottom-border:focus {
+  border: none !important;
+  border-bottom: 1px solid rgba(234, 91, 40, 0.8) !important;
+  background-color: rgba(234, 91, 40, 0.15) !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Dropdown option styling */
+.login-select-bottom-border option {
+  background-color: #58398D !important;
+  color: white !important;
+  padding: 8px 12px !important;
+}
+
+.login-select-bottom-border option:hover,
+.login-select-bottom-border option:focus {
+  background-color: #EA5B28 !important;
+  color: white !important;
+}
+
+/* Additional dropdown styling for better appearance */
+select.login-select-bottom-border {
+  cursor: pointer !important;
+}
+
+select.login-select-bottom-border:hover {
+  background-color: rgba(234, 91, 40, 0.1) !important;
+}
+
+select.login-select-bottom-border:focus {
+  background-color: rgba(234, 91, 40, 0.15) !important;
+}
+
+/* Ensure dropdown options have proper spacing and hover effects */
+select.login-select-bottom-border option {
+  background-color: #58398D !important;
+  color: white !important;
+  padding: 12px 16px !important;
+  margin: 2px 0 !important;
+  border-radius: 4px !important;
+  transition: background-color 0.2s ease-in-out !important;
+}
+
+select.login-select-bottom-border option:hover,
+select.login-select-bottom-border option:focus,
+select.login-select-bottom-border option:checked {
+  background-color: #EA5B28 !important;
+  color: white !important;
+  font-weight: 500 !important;
+}
+
+/* Custom dropdown arrow styling */
+select.login-select-bottom-border {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.7)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 12px center !important;
+  background-size: 16px !important;
+  padding-right: 40px !important;
+}
+
+/* Animated Logo Styles */
+.animated-logo {
+  animation: logoFlipGlow 6s ease-in-out infinite;
+  filter: drop-shadow(0 0 20px rgba(234, 91, 40, 0.6)) 
+          drop-shadow(0 0 40px rgba(234, 91, 40, 0.4))
+          drop-shadow(0 0 60px rgba(234, 91, 40, 0.2));
+  transition: all 0.3s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.animated-logo:hover {
+  filter: drop-shadow(0 0 30px rgba(234, 91, 40, 0.8)) 
+          drop-shadow(0 0 60px rgba(234, 91, 40, 0.6))
+          drop-shadow(0 0 90px rgba(234, 91, 40, 0.4));
+  transform: scale(1.05);
+  animation-play-state: paused;
+}
+
+@keyframes logoFlipGlow {
+  0% {
+    transform: rotateY(0deg) scale(1);
+    filter: drop-shadow(0 0 20px rgba(234, 91, 40, 0.6)) 
+            drop-shadow(0 0 40px rgba(234, 91, 40, 0.4))
+            drop-shadow(0 0 60px rgba(234, 91, 40, 0.2));
+  }
+  12.5% {
+    transform: rotateY(45deg) scale(1.05);
+    filter: drop-shadow(0 0 25px rgba(234, 91, 40, 0.7)) 
+            drop-shadow(0 0 50px rgba(234, 91, 40, 0.5))
+            drop-shadow(0 0 75px rgba(234, 91, 40, 0.3));
+  }
+  25% {
+    transform: rotateY(90deg) scale(1.1);
+    filter: drop-shadow(0 0 30px rgba(234, 91, 40, 0.8)) 
+            drop-shadow(0 0 60px rgba(234, 91, 40, 0.6))
+            drop-shadow(0 0 90px rgba(234, 91, 40, 0.4));
+  }
+  37.5% {
+    transform: rotateY(135deg) scale(1.05);
+    filter: drop-shadow(0 0 25px rgba(234, 91, 40, 0.7)) 
+            drop-shadow(0 0 50px rgba(234, 91, 40, 0.5))
+            drop-shadow(0 0 75px rgba(234, 91, 40, 0.3));
+  }
+  50% {
+    transform: rotateY(180deg) scale(1);
+    filter: drop-shadow(0 0 20px rgba(234, 91, 40, 0.6)) 
+            drop-shadow(0 0 40px rgba(234, 91, 40, 0.4))
+            drop-shadow(0 0 60px rgba(234, 91, 40, 0.2));
+  }
+  62.5% {
+    transform: rotateY(225deg) scale(1.05);
+    filter: drop-shadow(0 0 25px rgba(234, 91, 40, 0.7)) 
+            drop-shadow(0 0 50px rgba(234, 91, 40, 0.5))
+            drop-shadow(0 0 75px rgba(234, 91, 40, 0.3));
+  }
+  75% {
+    transform: rotateY(270deg) scale(1.1);
+    filter: drop-shadow(0 0 30px rgba(234, 91, 40, 0.8)) 
+            drop-shadow(0 0 60px rgba(234, 91, 40, 0.6))
+            drop-shadow(0 0 90px rgba(234, 91, 40, 0.4));
+  }
+  87.5% {
+    transform: rotateY(315deg) scale(1.05);
+    filter: drop-shadow(0 0 25px rgba(234, 91, 40, 0.7)) 
+            drop-shadow(0 0 50px rgba(234, 91, 40, 0.5))
+            drop-shadow(0 0 75px rgba(234, 91, 40, 0.3));
+  }
+  100% {
+    transform: rotateY(360deg) scale(1);
+    filter: drop-shadow(0 0 20px rgba(234, 91, 40, 0.6)) 
+            drop-shadow(0 0 40px rgba(234, 91, 40, 0.4))
+            drop-shadow(0 0 60px rgba(234, 91, 40, 0.2));
+  }
+}
+
+/* Alternative pulsing glow effect */
+.animated-logo-glow {
+  animation: logoGlow 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 15px rgba(234, 91, 40, 0.5)) 
+          drop-shadow(0 0 30px rgba(234, 91, 40, 0.3))
+          drop-shadow(0 0 45px rgba(234, 91, 40, 0.1));
+}
+
+@keyframes logoGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 15px rgba(234, 91, 40, 0.5)) 
+            drop-shadow(0 0 30px rgba(234, 91, 40, 0.3))
+            drop-shadow(0 0 45px rgba(234, 91, 40, 0.1));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 25px rgba(234, 91, 40, 0.8)) 
+            drop-shadow(0 0 50px rgba(234, 91, 40, 0.6))
+            drop-shadow(0 0 75px rgba(234, 91, 40, 0.4));
+    transform: scale(1.05);
+  }
+}
+
+
