@@ -59,11 +59,31 @@ function Sidebar({ isMobileSidebarOpen, toggleSidebar }) {
           { path: "/admin/dashboard", name: "Dashboard", icon: DashboardIcon },
           { path: "/admin/users", name: "User Management", icon: StudentIcon },
           { path: "/admin/jobs", name: "Job Management", icon: TeacherIcon },
-          { path: "/admin/bids", name: "Bids Management", icon: EvealuationlIcon },
-          { path: "/admin/work-orders", name: "Work Orders & Progress", icon: ScheduleIcon },
-          { path: "/admin/payments", name: "Payment & Transfers", icon: FinancialIcon },
-          { path: "/admin/ratings", name: "Ratings & Reviews", icon: CalendarIcon },
-          { path: "/admin/reports", name: "Reports & Validations", icon: RelationIcon },
+          {
+            path: "/admin/bids",
+            name: "Bids Management",
+            icon: EvealuationlIcon,
+          },
+          {
+            path: "/admin/work-orders",
+            name: "Work Orders & Progress",
+            icon: ScheduleIcon,
+          },
+          {
+            path: "/admin/payments",
+            name: "Payment & Transfers",
+            icon: FinancialIcon,
+          },
+          {
+            path: "/admin/ratings",
+            name: "Ratings & Reviews",
+            icon: CalendarIcon,
+          },
+          {
+            path: "/admin/reports",
+            name: "Reports & Validations",
+            icon: RelationIcon,
+          },
         ],
         bottom: [],
       },
@@ -71,22 +91,66 @@ function Sidebar({ isMobileSidebarOpen, toggleSidebar }) {
         main: [
           { path: "/user/dashboard", name: "Dashboard", icon: DashboardIcon },
           { path: "/user/jobs", name: "Job Management", icon: TeacherIcon },
-          { path: "/user/bids", name: "Bids Management", icon: EvealuationlIcon },
-          { path: "/user/work-orders", name: "Work Orders & Progress", icon: ScheduleIcon },
-          { path: "/user/payments", name: "Payment & Transfers", icon: FinancialIcon },
-          { path: "/user/ratings", name: "Ratings & Reviews", icon: CalendarIcon },
+          {
+            path: "/user/bids",
+            name: "Bids Management",
+            icon: EvealuationlIcon,
+          },
+          {
+            path: "/user/work-orders",
+            name: "Work Orders & Progress",
+            icon: ScheduleIcon,
+          },
+          {
+            path: "/user/payments",
+            name: "Payment & Transfers",
+            icon: FinancialIcon,
+          },
+          {
+            path: "/user/ratings",
+            name: "Ratings & Reviews",
+            icon: CalendarIcon,
+          },
         ],
         bottom: [],
       },
       contractor: {
         main: [
-          { path: "/contractor/dashboard", name: "Dashboard", icon: DashboardIcon },
-          { path: "/contractor/jobs", name: "Job Management", icon: TeacherIcon },
-          { path: "/contractor/bids", name: "Bids Management", icon: EvealuationlIcon },
-          { path: "/contractor/work-orders", name: "Work Orders & Progress", icon: ScheduleIcon },
-          { path: "/contractor/payments", name: "Payment & Transfers", icon: FinancialIcon },
-          { path: "/contractor/ratings", name: "Ratings & Reviews", icon: CalendarIcon },
-          { path: "/contractor/reports", name: "Reports & Validations", icon: RelationIcon },
+          {
+            path: "/contractor/dashboard",
+            name: "Dashboard",
+            icon: DashboardIcon,
+          },
+          {
+            path: "/contractor/jobs",
+            name: "Job Management",
+            icon: TeacherIcon,
+          },
+          {
+            path: "/contractor/bids",
+            name: "Bids Management",
+            icon: EvealuationlIcon,
+          },
+          {
+            path: "/contractor/work-orders",
+            name: "Work Orders & Progress",
+            icon: ScheduleIcon,
+          },
+          {
+            path: "/contractor/payments",
+            name: "Payment & Transfers",
+            icon: FinancialIcon,
+          },
+          {
+            path: "/contractor/ratings",
+            name: "Ratings & Reviews",
+            icon: CalendarIcon,
+          },
+          {
+            path: "/contractor/reports",
+            name: "Reports & Validations",
+            icon: RelationIcon,
+          },
         ],
         bottom: [],
       },
@@ -335,7 +399,7 @@ function Sidebar({ isMobileSidebarOpen, toggleSidebar }) {
           </nav>
 
           {/* User Section */}
-          <div className="p-4">
+          <div className="p-4 fixed left-0  bottom-5 w-full md:static">
             {/* Logout Button */}
             <button
               onClick={handleLogout}
