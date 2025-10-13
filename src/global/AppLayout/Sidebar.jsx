@@ -260,7 +260,7 @@ function Sidebar({ isMobileSidebarOpen, toggleSidebar }) {
             <item.icon />
           </div>
         )}
-        <span className="text-[1.125rem] font-normal leading-[25px] font-poppins">
+        <span className="text-base font-normal leading-5 font-poppins">
           {item.name}
         </span>
         {item.badge && (
@@ -341,7 +341,7 @@ function Sidebar({ isMobileSidebarOpen, toggleSidebar }) {
                         >
                           <TeacherIcon />
                         </div>
-                        <span className="text-[1.125rem] font-normal leading-[25px] font-poppins">
+                        <span className="text-base font-normal leading-5 font-poppins">
                           {item.parent}
                         </span>
                         <div className="ml-auto">

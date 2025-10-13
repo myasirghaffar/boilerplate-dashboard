@@ -22,9 +22,9 @@ const Login = () => {
       const roleRouteMap = {
         admin: "admin",
         user: "user",
-        contractor: "contractor"
+        contractor: "contractor",
       };
-      
+
       const rolePath = roleRouteMap[userRole] || "admin";
       navigate(`/${rolePath}/dashboard`, { replace: true });
     }
@@ -60,7 +60,7 @@ const Login = () => {
         );
 
         // Show success toast
-        toast.success(`Bem-vindo, ${authenticatedUser.name}!`, {
+        toast.success(`Welcome, ${authenticatedUser.name}!`, {
           position: "top-right",
           autoClose: 3000,
           hideProgressBar: false,
@@ -73,7 +73,7 @@ const Login = () => {
         navigate(`/${authenticatedUser.route}/dashboard`);
       } else {
         // Show error toast for invalid credentials
-        toast.error("Email ou senha incorretos. Tente novamente.", {
+        toast.error("Incorrect email or password. Please try again.", {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -84,7 +84,7 @@ const Login = () => {
       }
     } catch (error) {
       // Show error toast for any unexpected errors
-      toast.error("Ocorreu um erro durante o login. Tente novamente.", {
+      toast.error("An error occurred during login. Please try again.", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -112,10 +112,10 @@ const Login = () => {
         <div className="lg:col-span-2 bg-primary p-12 flex flex-col justify-center">
           {/* ITEC Logo */}
           <div className="flex flex-col items-center mb-4">
-            <img 
-              src={main_logo} 
-              alt="ITEC Logo" 
-              className="w-32 h-32 animated-logo" 
+            <img
+              src={main_logo}
+              alt="ITEC Logo"
+              className="w-32 h-32 animated-logo"
             />
           </div>
 
@@ -123,10 +123,12 @@ const Login = () => {
           <h2 className="text-white text-center text-2xl font-poppins mb-6">
             Welcome to our platform!
           </h2>
-          
+
           {/* Test Accounts Info */}
           <div className="mb-6 p-4 bg-white/10 rounded-lg border border-white/20">
-            <h3 className="text-white text-sm font-semibold mb-2">Test Accounts:</h3>
+            <h3 className="text-white text-sm font-semibold mb-2">
+              Test Accounts:
+            </h3>
             <div className="text-white/80 text-xs space-y-1">
               <p>• admin@example.com / admin123</p>
               <p>• user@example.com / user123</p>
@@ -136,18 +138,17 @@ const Login = () => {
 
           {/* Login Form */}
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-
             {/* Email Field */}
             <div className="mb-6">
               <input
                 type="email"
-                placeholder="E-mail do usuário"
+                placeholder="User email"
                 className="w-full bg-transparent text-white py-3 px-3 placeholder-white/50 login-input-bottom-border"
                 {...register("email", {
-                  required: "Email é obrigatório",
+                  required: "Email is required",
                   pattern: {
                     value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                    message: "Endereço de email inválido",
+                    message: "Invalid email address",
                   },
                 })}
               />
@@ -162,13 +163,13 @@ const Login = () => {
             <div className="mb-8">
               <input
                 type="password"
-                placeholder="Senha"
+                placeholder="Password"
                 className="w-full bg-transparent text-white py-3 px-3 placeholder-white/50 login-input-bottom-border"
                 {...register("password", {
-                  required: "Senha é obrigatória",
+                  required: "Password is required",
                   minLength: {
                     value: 6,
-                    message: "A senha deve ter pelo menos 6 caracteres",
+                    message: "Password must be at least 6 characters",
                   },
                 })}
               />
@@ -192,7 +193,7 @@ const Login = () => {
               type="submit"
               className="w-full bg-secondary text-white py-3 font-medium rounded-md text-lg hover:bg-secondary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {auth.loading ? "Entrando..." : "Entrar"}
+              {auth.loading ? "Logging in..." : "Login"}
             </button>
 
             {/* Separator */}
@@ -207,7 +208,7 @@ const Login = () => {
           </form>
         </div>
       </div>
-      
+
       {/* Toast Container */}
       <ToastContainer
         position="top-right"
